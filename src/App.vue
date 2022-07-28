@@ -1,16 +1,25 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <!-- <img alt="Vue logo" src="./assets/logo.png">
+  <HelloWorld msg="Welcome to Your Vue.js App"/> -->
+  <PasswordReveling v-model="password" id="password" placeholder="Digite sua senha" />
+  <br/>
+  {{ password }}
+
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import PasswordReveling from './components/PasswordReveling.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    PasswordReveling
+  },
+  data() {
+    return {
+      password: ''
+    }
+  },
 }
 </script>
 
